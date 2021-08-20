@@ -22,8 +22,6 @@
     <template:addResources type="javascript" resources="react/main.js" />
     <template:addResources type="javascript" resources="init.js" />
 
-    <script type="text/javascript" src="/modules/vanity-url-settings/javascript/init.js"></script>
-
     <template:addResources type="css" resources="materialize.min.css" />
 </head>
 <body>

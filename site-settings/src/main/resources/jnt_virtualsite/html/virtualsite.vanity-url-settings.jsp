@@ -19,8 +19,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <template:addResources type="javascript" resources="react/main.js" />
-    <template:addResources type="javascript" resources="init.js" />
+    <script type="text/javascript" src="${url.currentModule}/javascript/react/vendors.js"></script>
+    <script type="text/javascript" src="${url.currentModule}/javascript/react/main.js"></script>
 
     <template:addResources type="css" resources="materialize.min.css" />
 </head>

@@ -25,3 +25,6 @@ hs_err_pid*
 /.idea
 *.iml
 /target
+react/
+/src/main/resources/javascript/ui-bundle/
+ui-bundle/

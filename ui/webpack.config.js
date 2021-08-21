@@ -5,8 +5,8 @@
      devtool: 'source-map',
      entry: './src/index.js',
      output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'main.js'
+        path: path.resolve(__dirname, '../site-settings/src/main/resources/javascript/react'),
+        filename: '[name].js'
      },
 
      module: {
@@ -30,6 +30,18 @@
             filename: "index.html",  //target html
             template: "./src/index.html" //source html
         })
-    ]
+    ],
+
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          commons: {
+            test: /[\\/]node_modules[\\/]/,
+            name: "vendors",
+            chunks: "all",
+          },
+        },
+      },
+    }
 
  }

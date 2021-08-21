@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack ./src --mode production",
+    "build": "webpack ./src --mode development",
     "start": "webpack-dev-server --mode development --open --hot --port 8008"
   },
   "author": "Prince Arora",

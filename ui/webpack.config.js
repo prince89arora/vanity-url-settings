@@ -5,7 +5,7 @@
      devtool: 'source-map',
      entry: './src/index.js',
      output: {
-        path: path.resolve(__dirname, '../site-settings/src/main/resources/javascript/react'),
+        path: path.resolve(__dirname, '../site-settings/src/main/resources/javascript/ui-bundle'),
         filename: '[name].js'
      },
 

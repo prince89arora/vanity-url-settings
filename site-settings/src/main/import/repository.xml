@@ -12,14 +12,6 @@
          <templates j:rootTemplatePath="/base" jcr:primaryType="jnt:templatesFolder">
             <files jcr:primaryType="jnt:folder"/>
             <contents jcr:primaryType="jnt:contentFolder"/>
-            <site-settings-base j:view="siteSettings" jcr:primaryType="jnt:template">
-               <settings-panel j:applyOn="jnt:virtualsite" jcr:primaryType="jnt:contentTemplate">
-                  <pagecontent jcr:mixinTypes="jmix:systemNameReadonly"
-                               jcr:primaryType="jnt:contentList">
-                     <vanityurlsettingspanel jcr:primaryType="jnt:vanityUrlSettingsPanel"/>
-                  </pagecontent>
-               </settings-panel>
-            </site-settings-base>
          </templates>
       </vanity-url-settings>
    </modules>

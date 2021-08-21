@@ -25,6 +25,6 @@ hs_err_pid*
 /.idea
 *.iml
 /target
+target/
 node_modules/
-/node_modules
 ui-bundle/

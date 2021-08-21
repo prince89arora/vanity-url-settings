@@ -19,21 +19,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <script type="text/javascript" src="${url.currentModule}/javascript/react/vendors.js"></script>
-    <script type="text/javascript" src="${url.currentModule}/javascript/react/main.js"></script>
+    <script type="text/javascript" src="${url.currentModule}/javascript/ui-bundle/vendors.js"></script>
+    <script type="text/javascript" src="${url.currentModule}/javascript/ui-bundle/main.js"></script>
 
-    <template:addResources type="css" resources="materialize.min.css" />
+    <template:addResources type="css" resources="ui-bundle/vendors.css" />
+    <template:addResources type="css" resources="ui-bundle/main.css" />
 </head>
 <body>
-        <div class="row">
-            <div class="col s12">
-                <div class="page-header">
-                    <h2><fmt:message key="page.title"/></h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div id="root"></div>
-        </div>
+    <div id="root"></div>
 </body>
 </html>

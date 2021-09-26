@@ -3,7 +3,7 @@ import PageManagerContextProvider from "./Context/PageManagerContext/PageManager
 import Header from "./Header";
 import PathManager from "./VanilyManager/PathManager";
 
-const Application = () => {
+const Application = (): JSX.Element => {
   console.log('asdsa')
   return (
     <>

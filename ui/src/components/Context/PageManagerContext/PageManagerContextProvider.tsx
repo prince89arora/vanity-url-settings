@@ -1,14 +1,16 @@
 import React from "react";
 import { useState } from "react";
-import { PageManagerContext } from "./PageManagerContext";
+import { Page, PageManagerContext } from "./PageManagerContext";
 
 type PageManagerContextProviderProps = {
-  children: any;
+  children: JSX.Element;
 };
 
-const PageManagerContextProvider = (props: PageManagerContextProviderProps) => {
-  const [list, setList] = useState([]);
-  const [selectedPageId, setSelectedPageId] = useState('Test Id');
+const listDefault: Array<Page> = []
+
+const PageManagerContextProvider = (props: PageManagerContextProviderProps): JSX.Element => {
+  const [list, setList] = useState(listDefault);
+  const [selectedPageId, setSelectedPageId] = useState("Test Id");
 
   return (
     <PageManagerContext.Provider

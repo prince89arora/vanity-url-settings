@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 interface HeaderProps {
-    pageHeading: String
+    pageHeading: string
 }
 
-const Header = ( props: HeaderProps ) => {
+const Header = ( props: HeaderProps ): JSX.Element => {
     return (
         <div className='page-header'>
             <div className="card-panel">

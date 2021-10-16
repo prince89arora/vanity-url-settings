@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Header = ({ pageHeading }) => {
+interface HeaderProps {
+    pageHeading: string
+}
+
+const Header = ( props: HeaderProps ): JSX.Element => {
     return (
         <div className='page-header'>
-            <div class="card-panel">
-                <h4>{pageHeading}</h4>
+            <div className="card-panel">
+                <h4>{props.pageHeading}</h4>
             </div>
         </div>
     );

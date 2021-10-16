@@ -1,3 +1,4 @@
+/* eslint-disable */
 const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -11,9 +12,14 @@ function getCssRule() {
   }
 }
 
+const getDevTools = () => {
+  return (process.env.NODE_ENV === 'development') ? undefined : 'source-map';
+}
+
 module.exports = {
-  devtool: 'source-map',
-  entry: './src/index.js',
+  devtool: getDevTools(),
+  entry: './src/index.tsx',
+  mode: process.env.NODE_ENV,
   output: {
     path: path.resolve(
       __dirname,
@@ -25,14 +31,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-react'],
-          },
+        resolve: {
+          extensions: ['.ts', '.tsx', '.js', '.json'],
         },
+        use: 'ts-loader'
       },
       {
         test: /\.css(\?.*)?$/i,

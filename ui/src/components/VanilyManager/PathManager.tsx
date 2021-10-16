@@ -1,5 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { PageManagerContext } from '../Context/PageManagerContext';
+import PageList from './PageList';
 
 /**
  * 
@@ -7,12 +8,16 @@ import { PageManagerContext } from '../Context/PageManagerContext';
  */
 const PathManager = () : JSX.Element => {
 
-    const { list, selectedPageId } = useContext(PageManagerContext)
+    const { loading } = useContext(PageManagerContext)
 
+    useEffect(() => {
+        console.log(loading)
+    }, [loading])
     return (
         <>
-            {list && list.map(item => <p key={item.name}>{item.name}</p>)}
-            <p>{selectedPageId}</p>
+            {loading ? 
+                <p>Loading.....</p> :
+                <PageList />}
         </>
     );
 }

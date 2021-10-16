@@ -1,0 +1,30 @@
+.tree {
+    position: relative;
+}
+.tree .item {
+    padding: 0.5rem 0.5rem;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.tree .item .content {
+    display: flex;
+    gap: 0.5rem;
+}
+.tree .item .extender {
+    padding: 0rem 0.5rem;
+}
+
+.tree .child-container {
+    margin-left: 0.5rem;
+    display: none;
+}
+
+.tree .child-container.open {
+    display: block;
+}
+
+.tree .item a {
+    cursor: pointer;
+}

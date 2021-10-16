@@ -1,21 +1,18 @@
 import { createContext } from "react"
-
-export type Page = {
- name: string,
- path: string,
- title: string  
-}
+import PageItem from "../../Type/PageItem"
+import Site from "../../Type/Site"
 
 export type PageManagerContextProps = {
-    list: Array<Page>
-    setList: (data: Array<Page>) => void
-    selectedPageId: string,
-    setSelectedPageId: (pageId: string) => void
+    site?: Site
+    selectedPageId?: string,
+    setSelectedPageId?: (pageId: string) => void,
+    loading?: boolean,
+    error?: any
 }
 
 export const PageManagerContext = createContext<PageManagerContextProps>({
-    list: [],
-    setList: () => console.warn('No provider found'),
     selectedPageId: '',
     setSelectedPageId: () => console.warn('No provider found'),
+    loading: false,
+    error: {}
 })

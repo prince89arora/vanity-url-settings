@@ -13,10 +13,13 @@
   "author": "Prince Arora",
   "license": "MIT",
   "dependencies": {
+    "@apollo/react-hooks": "^4.0.0",
+    "apollo-boost": "^0.4.9",
+    "graphql": "^15.6.0",
     "materialize-css": "^1.0.0-rc.2",
     "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "16.8.0",
+    "react-dom": "16.8.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.24",

@@ -1,5 +1,4 @@
 import { createContext } from "react"
-import PageItem from "../../Type/PageItem"
 import Site from "../../Type/Site"
 
 export type PageManagerContextProps = {

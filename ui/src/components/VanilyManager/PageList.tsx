@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { PageManagerContext } from '../Context/PageManagerContext';
 import { TreeView } from '../Tree/TreeView';
-import PageItem from '../Type/PageItem';
+import PageItem from '../Type/Page/PageItem';
 
 const PageList = () : JSX.Element => {
 

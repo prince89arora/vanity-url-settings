@@ -1,4 +1,4 @@
-import PageItem from "./PageItem"
+import PageItem from "./Page/PageItem"
 
 export default class Site {
 
@@ -10,12 +10,12 @@ export default class Site {
         this.pages = []
     }
 
-    addPage(page: PageItem) {
+    addPage(page: PageItem): void {
         this.pages.push(page)
         this.pagesMap.set( page.uuid, page )
     }
 
-    addChild(parent: string, page: PageItem) {
+    addChild(parent: string, page: PageItem): void {
         const parentItem = this.pagesMap.get(parent)
         
         if ( parentItem ) {
@@ -34,11 +34,11 @@ export default class Site {
         return this.pagesMap.get(uuid)
     }
 
-    get pageMap() {
+    get pageMap(): Map<string, PageItem> {
         return this.pagesMap
     }
 
-    get pageList() {
+    get pageList(): Array<PageItem> {
         return this.pages
     }
 }
